@@ -8,7 +8,7 @@ const projects = [
     link: '#'
   },
   {
-    title: 'Solutions d\'automatisation Excel/VBA',
+    title: "Solutions d'automatisation Excel/VBA",
     desc: 'Solutions Excel/VBA transformant les fichiers en applications métier : tableaux de bord interactifs, reportings automatisés, mails programmés. Impact : -60% temps, -75% erreurs.',
     tags: ['Excel', 'VBA', 'Power Query', 'Power BI'],
     link: '#'
@@ -29,11 +29,11 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-white to-sky-50">
+    <section id="projects" className="py-24 bg-gradient-to-b from-transparent to-slate-900/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">Projets</h2>
-          <a href="#contact" className="hidden md:inline-flex items-center rounded-full bg-sky-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-sky-700">Discutons</a>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Projets</h2>
+          <a href="#contact" className="hidden md:inline-flex items-center rounded-full bg-sky-400 text-slate-900 px-4 py-2 text-sm font-medium shadow hover:bg-sky-300">Discutons</a>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -41,18 +41,18 @@ export default function Projects() {
             <motion.a
               key={p.title}
               href={p.link}
-              className="group relative rounded-2xl border border-sky-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow"
+              className="group relative rounded-2xl ring-1 ring-white/10 bg-white/5 p-5 shadow-sm hover:bg-white/[0.07] transition-colors backdrop-blur"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="aspect-video rounded-xl bg-gradient-to-br from-sky-100 to-gray-50 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">{p.title}</h3>
-              <p className="mt-1 text-gray-600 text-sm">{p.desc}</p>
+              <div className="aspect-video rounded-xl bg-gradient-to-br from-sky-500/20 to-indigo-500/10 mb-4 ring-1 ring-white/10" />
+              <h3 className="text-lg font-semibold text-white group-hover:text-sky-200 transition-colors">{p.title}</h3>
+              <p className="mt-1 text-slate-300 text-sm">{p.desc}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {p.tags.map(t => (
-                  <span key={t} className="inline-flex items-center rounded-full bg-sky-50 text-sky-700 ring-1 ring-sky-200 px-2.5 py-1 text-xs">{t}</span>
+                  <span key={t} className="inline-flex items-center rounded-full bg-sky-400/10 text-sky-200 ring-1 ring-sky-400/30 px-2.5 py-1 text-xs">{t}</span>
                 ))}
               </div>
             </motion.a>

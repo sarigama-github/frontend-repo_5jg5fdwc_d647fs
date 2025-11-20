@@ -4,27 +4,40 @@ import About from './components/About'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Services from './components/Services'
+import Skills from './components/Skills'
 import Contact from './components/Contact'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen text-slate-100 bg-[#0b1020] relative">
+      {/* Global decorative background */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl" />
+        <div className="absolute top-1/3 -right-32 h-[28rem] w-[28rem] rounded-full bg-indigo-500/20 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-80 w-[40rem] bg-gradient-to-t from-sky-500/10 to-transparent blur-2xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(2,6,23,0)_0%,rgba(2,6,23,0.6)_60%,rgba(2,6,23,1)_100%)]" />
+      </div>
+
       <Navbar />
-      <main>
+      <main className="pt-16">
         <Hero />
         <About />
         <Experience />
         <Projects />
         <Services />
+        <Skills />
         <Contact />
       </main>
-      <footer className="border-t border-gray-100 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-500 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p>Construit avec Vite + React et Tailwind CSS. © {new Date().getFullYear()} Florian Anthony. Tous droits réservés.</p>
+
+      <footer className="border-t border-white/10 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-300/80 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p>
+            Construit avec passion. © {new Date().getFullYear()} Florian Anthony — Tous droits réservés.
+          </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-sky-700">LinkedIn</a>
-            <a href="#" className="hover:text-sky-700">GitHub</a>
-            <a href="#" className="hover:text-sky-700">X</a>
+            <a href="#" className="hover:text-sky-300 transition-colors">LinkedIn</a>
+            <a href="#" className="hover:text-sky-300 transition-colors">GitHub</a>
+            <a href="#" className="hover:text-sky-300 transition-colors">X</a>
           </div>
         </div>
       </footer>
