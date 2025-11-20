@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react'
 
 const links = [
   { href: '#about', label: 'À propos' },
+  { href: '#experience', label: 'Expérience' },
   { href: '#projects', label: 'Projets' },
-  { href: '#skills', label: 'Compétences' },
+  { href: '#services', label: 'Services' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -23,7 +24,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="font-semibold text-gray-800 tracking-tight text-lg">
-            <span className="text-sky-600">{`<`}</span> Portfolio <span className="text-sky-600">{`/>`}</span>
+            <span className="text-sky-600">{`<`}</span> Florian Anthony <span className="text-sky-600">{`/>`}</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">

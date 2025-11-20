@@ -11,20 +11,16 @@ export default function About() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">À propos de moi</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">À propos</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              Développeur orienté produit, passionné par le design minimal et les expériences claires. Expérience en fintech et e‑commerce, je construis des interfaces performantes et des services backend robustes. J'accorde de l'importance à la qualité, à l'accessibilité et à une livraison rapide de valeur.
+              Consultant en Gestion et Automatisation, je transforme les processus métier en systèmes automatisés. Mes solutions sur mesure ont réduit jusqu'à 60% du temps administratif et 75% des erreurs manuelles.
             </p>
-            <div className="mt-6 grid grid-cols-2 gap-4">
-              <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
-                <p className="text-3xl font-semibold text-sky-700">5+ ans</p>
-                <p className="text-sm text-sky-900/70">Expérience</p>
-              </div>
-              <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
-                <p className="text-3xl font-semibold text-sky-700">30+</p>
-                <p className="text-sm text-sky-900/70">Projets</p>
-              </div>
-            </div>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Formé en commerce puis en informatique de gestion, j'ai développé une expertise unique en combinant compréhension métier et maîtrise technique. Spécialisé en Excel/VBA, j'ai élargi mes compétences au développement web, à l'intégration d'IA et aux architectures de données.
+            </p>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Chaque projet suit une méthodologie éprouvée : diagnostic approfondi, conception sur mesure, formation des équipes et support post-déploiement pour garantir l'adoption.
+            </p>
           </motion.div>
           <motion.div
             className="relative"
@@ -35,7 +31,7 @@ export default function About() {
           >
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-sky-100 to-gray-50 p-2 shadow-inner">
               <div className="h-full w-full rounded-2xl bg-white shadow-sm flex items-center justify-center">
-                <span className="text-sky-700 font-medium">Votre portrait ici</span>
+                <span className="text-sky-700 font-medium">Portrait de Florian</span>
               </div>
             </div>
           </motion.div>

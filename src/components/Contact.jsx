@@ -37,8 +37,8 @@ export default function Contact() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">Discutons</h2>
-            <p className="mt-4 text-gray-600">Un projet en tête ou simplement envie d'échanger ? Laissez un message et je reviens vers vous sous 1–2 jours ouvrés.</p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">Contact</h2>
+            <p className="mt-4 text-gray-600">Prêt à automatiser vos processus ? Discutons de votre projet et transformons vos défis en solutions efficaces.</p>
             {status && <p className="mt-4 text-sky-700 bg-sky-50 border border-sky-100 rounded-xl px-4 py-3">{status}</p>}
           </motion.div>
 
@@ -64,7 +64,7 @@ export default function Contact() {
               <label className="block text-sm text-gray-700 mb-1">Message</label>
               <textarea name="message" rows={5} required className="w-full rounded-xl border-gray-200 focus:ring-sky-500 focus:border-sky-500" />
             </div>
-            <button type="submit" className="mt-4 inline-flex items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-sky-700">Envoyer le message</button>
+            <button type="submit" className="mt-4 inline-flex items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-sky-700">Envoyer</button>
           </motion.form>
         </div>
       </div>

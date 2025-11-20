@@ -2,21 +2,27 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'Tableau de bord Fintech',
-    desc: "Plateforme orientée analytics avec émission de cartes et paiements.",
-    tags: ['React', 'Tailwind', 'FastAPI'],
+    title: 'Workedd CH',
+    desc: "Plateforme SaaS automatisant l'insertion professionnelle : gestion des candidatures, suivi des coachings, organisation des ateliers. 50+ jeunes coachés avec taux de placement supérieur à la moyenne.",
+    tags: ['SaaS', 'Automatisation', 'Coaching', 'Gestion de projet'],
     link: '#'
   },
   {
-    title: 'Starter E‑commerce',
-    desc: 'Boutique minimaliste avec backend headless.',
-    tags: ['Next.js', 'Stripe', 'MongoDB'],
+    title: 'Solutions d\'automatisation Excel/VBA',
+    desc: 'Solutions Excel/VBA transformant les fichiers en applications métier : tableaux de bord interactifs, reportings automatisés, mails programmés. Impact : -60% temps, -75% erreurs.',
+    tags: ['Excel', 'VBA', 'Power Query', 'Power BI'],
     link: '#'
   },
   {
-    title: 'Site marketing SaaS',
-    desc: 'Système de landing pages propre et performant.',
-    tags: ['Vite', 'Framer Motion'],
+    title: 'Sites web avec intégration IA',
+    desc: 'Sites web avec intégration IA : chatbots conversationnels, recommandations personnalisées et analyse prédictive pour des expériences utilisateur intelligentes.',
+    tags: ['HTML/CSS', 'JavaScript', 'PHP', 'WordPress', 'IA'],
+    link: '#'
+  },
+  {
+    title: 'API et bases de données',
+    desc: 'Architecture de données : bases MySQL/Supabase et API RESTful Node.js/Python. Automatisation des processus métier et centralisation des données pour une meilleure gouvernance.',
+    tags: ['MySQL','Supabase','Node.js','Python','API'],
     link: '#'
   },
 ]
@@ -26,11 +32,11 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-gradient-to-b from-white to-sky-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">Travaux sélectionnés</h2>
-          <a href="#contact" className="hidden md:inline-flex items-center rounded-full bg-sky-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-sky-700">Travaillons ensemble</a>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">Projets</h2>
+          <a href="#contact" className="hidden md:inline-flex items-center rounded-full bg-sky-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-sky-700">Discutons</a>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
             <motion.a
               key={p.title}

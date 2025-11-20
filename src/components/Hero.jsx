@@ -30,7 +30,9 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="mt-4 text-4xl md:text-6xl font-semibold tracking-tight text-gray-900"
             >
-              Bonjour, je suis <span className="text-sky-700">Votre Nom</span>. Je conçois et développe des produits digitaux.
+              Salut, je m'appelle <span className="text-sky-700">Florian Anthony</span>.
+              <br />
+              <span className="text-gray-800">Consultant en Gestion et Automatisation</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -38,7 +40,7 @@ export default function Hero() {
               transition={{ delay: 0.45, duration: 0.6 }}
               className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed bg-white/70 backdrop-blur rounded-xl p-4 md:p-5 shadow"
             >
-              Interfaces modernes, épurées et minimalistes, avec un focus sur la performance et l'attention aux détails. Parfait pour la fintech, les SaaS et l'e‑commerce.
+              Je transforme vos processus répétitifs en systèmes automatisés. Résultats : -60% de temps, -75% d'erreurs.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -47,7 +49,7 @@ export default function Hero() {
               className="mt-6 flex items-center gap-3"
             >
               <a href="#projects" className="inline-flex items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-sky-700 transition-colors">Voir mes projets</a>
-              <a href="#contact" className="inline-flex items-center rounded-full bg-white/80 text-sky-700 ring-1 ring-sky-200 px-5 py-2.5 text-sm font-medium hover:bg-white transition-colors">Contact</a>
+              <a href="#contact" className="inline-flex items-center rounded-full bg-white/80 text-sky-700 ring-1 ring-sky-200 px-5 py-2.5 text-sm font-medium hover:bg-white transition-colors">Me contacter</a>
             </motion.div>
           </motion.div>
         </div>
