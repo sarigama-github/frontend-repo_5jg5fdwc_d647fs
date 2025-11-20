@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -6,10 +7,20 @@ import Projects from './components/Projects'
 import Services from './components/Services'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Splash from './components/Splash'
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSplash(false), 1800)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <div className="min-h-screen text-slate-100 bg-[#0b1020] relative">
+    <div className="min-h-screen text-slate-100 bg-[#0b1020] relative font-sans">
+      <Splash show={showSplash} />
+
       {/* Global decorative background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl" />
@@ -19,7 +30,7 @@ function App() {
       </div>
 
       <Navbar />
-      <main className="pt-16">
+      <main className={`pt-16 transition-opacity duration-500 ${showSplash ? 'opacity-0' : 'opacity-100'}`}>
         <Hero />
         <About />
         <Experience />
