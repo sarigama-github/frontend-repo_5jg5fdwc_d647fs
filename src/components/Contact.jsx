@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
   const [status, setStatus] = useState('')
 
   const onSubmit = async (e) => {
     e.preventDefault()
-    setStatus('Sending...')
+    setStatus('Envoi en cours...')
     try {
       const baseUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
       const body = Object.fromEntries(new FormData(e.currentTarget))
@@ -15,14 +16,14 @@ export default function Contact() {
         body: JSON.stringify(body),
       })
       if (res.ok) {
-        setStatus('Thanks! I will get back to you soon.')
+        setStatus('Merci ! Je vous répondrai sous 1–2 jours ouvrés.')
         e.currentTarget.reset()
       } else {
         const t = await res.text()
-        setStatus(`Something went wrong: ${t}`)
+        setStatus(`Une erreur est survenue : ${t}`)
       }
     } catch (err) {
-      setStatus(`Network error: ${err.message}`)
+      setStatus(`Erreur réseau : ${err.message}`)
     }
   }
 
@@ -30,16 +31,28 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-gradient-to-b from-sky-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">Let’s talk</h2>
-            <p className="mt-4 text-gray-600">Have a project in mind or just want to say hi? Drop a message and I’ll respond within 1–2 business days.</p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">Discutons</h2>
+            <p className="mt-4 text-gray-600">Un projet en tête ou simplement envie d'échanger ? Laissez un message et je reviens vers vous sous 1–2 jours ouvrés.</p>
             {status && <p className="mt-4 text-sky-700 bg-sky-50 border border-sky-100 rounded-xl px-4 py-3">{status}</p>}
-          </div>
+          </motion.div>
 
-          <form onSubmit={onSubmit} className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+          <motion.form
+            onSubmit={onSubmit}
+            className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm text-gray-700 mb-1">Name</label>
+                <label className="block text-sm text-gray-700 mb-1">Nom</label>
                 <input name="name" required className="w-full rounded-xl border-gray-200 focus:ring-sky-500 focus:border-sky-500" />
               </div>
               <div>
@@ -51,8 +64,8 @@ export default function Contact() {
               <label className="block text-sm text-gray-700 mb-1">Message</label>
               <textarea name="message" rows={5} required className="w-full rounded-xl border-gray-200 focus:ring-sky-500 focus:border-sky-500" />
             </div>
-            <button type="submit" className="mt-4 inline-flex items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-sky-700">Send message</button>
-          </form>
+            <button type="submit" className="mt-4 inline-flex items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-sky-700">Envoyer le message</button>
+          </motion.form>
         </div>
       </div>
     </section>

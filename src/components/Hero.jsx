@@ -1,4 +1,5 @@
 import Spline from '@splinetool/react-spline'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
@@ -9,19 +10,46 @@ export default function Hero() {
 
       <div className="relative z-10 h-full">
         <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center rounded-full bg-white/70 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700 shadow">Available for freelance</span>
-            <h1 className="mt-4 text-4xl md:text-6xl font-semibold tracking-tight text-gray-900">
-              Hi, I’m <span className="text-sky-700">Your Name</span>. I design and build digital products.
-            </h1>
-            <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed bg-white/70 backdrop-blur rounded-xl p-4 md:p-5 shadow">
-              Modern, clean, minimalistic interfaces with a focus on performance and delightful details. Fintech, SaaS, and e‑commerce friendly.
-            </p>
-            <div className="mt-6 flex items-center gap-3">
-              <a href="#projects" className="inline-flex items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-sky-700 transition-colors">View work</a>
+          <motion.div
+            className="max-w-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+          >
+            <motion.span
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="inline-flex items-center rounded-full bg-white/70 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700 shadow"
+            >
+              Disponible pour des missions freelance
+            </motion.span>
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="mt-4 text-4xl md:text-6xl font-semibold tracking-tight text-gray-900"
+            >
+              Bonjour, je suis <span className="text-sky-700">Votre Nom</span>. Je conçois et développe des produits digitaux.
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45, duration: 0.6 }}
+              className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed bg-white/70 backdrop-blur rounded-xl p-4 md:p-5 shadow"
+            >
+              Interfaces modernes, épurées et minimalistes, avec un focus sur la performance et l'attention aux détails. Parfait pour la fintech, les SaaS et l'e‑commerce.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="mt-6 flex items-center gap-3"
+            >
+              <a href="#projects" className="inline-flex items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-sky-700 transition-colors">Voir mes projets</a>
               <a href="#contact" className="inline-flex items-center rounded-full bg-white/80 text-sky-700 ring-1 ring-sky-200 px-5 py-2.5 text-sm font-medium hover:bg-white transition-colors">Contact</a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
